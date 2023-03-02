@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Anamika';
+
+  constructor() {
+    console.log(this.name);
+  }
 }
