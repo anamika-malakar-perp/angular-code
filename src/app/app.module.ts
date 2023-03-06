@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppHighlight } from './directives/basic-highlight.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { ConvertNumber } from './pipes/number.pipe';
+import { AppScrollProgress } from './directives/app-scroll-progress.directive';
 
 @NgModule({
-  declarations: [AppComponent, AppHighlight, ConvertNumber],
+  declarations: [AppComponent, AppHighlight, ConvertNumber, AppScrollProgress],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

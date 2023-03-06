@@ -2,4 +2,6 @@
 <p appHighlight>{{ name }}</p>
 <p>{{ 5 | numberPipe }}</p>
 <button (click)="navigateToAuthPage()">Auth</button>
-<router-outlet></router-outlet>
+<div appScrollProgress>
+  <router-outlet></router-outlet>
+</div>
