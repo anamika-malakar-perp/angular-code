@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = 'Anamika';
 
-  constructor() {
-    console.log(this.name);
-  }
+  // constructor() {
+  //   console.log(this.name);
+  // }
+
+  //Without constructor and ngOnit the component will initiate.
 }
