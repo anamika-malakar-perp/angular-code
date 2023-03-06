@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +8,20 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   name = 'Anamika';
+  progresValue;
 
   constructor(private router: Router) {
     console.log(this.name);
+  }
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    var h = document.documentElement, 
+      b = document.body,
+      scrollTop = 'scrollTop',
+      scrollHeight = 'scrollHeight';
+      this.progresValue = (h[scrollTop]||b[scrollTop]) / ((h[scrollHeight]||b[scrollHeight]) - h.clientHeight) * 100;
+      console.log(this.progresValue)
   }
 
   //Without constructor and ngOnit the component will initiate.
