@@ -13,4 +13,6 @@ export class AppComponent {
   // }
 
   //Without constructor and ngOnit the component will initiate.
+  //Constructor used to keep all the instance of dependency injection
+  //ngOnit used to add specific initializaion logic.
 }
