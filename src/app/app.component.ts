@@ -11,6 +11,7 @@ export class AppComponent {
   progresValue;
 
   constructor(private router: Router) {
+    this.progresValue =0;
     console.log(this.name);
   }
 
