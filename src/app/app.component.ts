@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = 'Anamika';
 
-  // constructor() {
-  //   console.log(this.name);
-  // }
+  constructor(private router: Router) {
+    console.log(this.name);
+  }
 
   //Without constructor and ngOnit the component will initiate.
   //Constructor used to keep all the instance of dependency injection
   //ngOnit used to add specific initializaion logic.
+
+  navigateToAuthPage() {
+    // this.router.navigate('')
+  }
 }
