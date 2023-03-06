@@ -18,6 +18,6 @@ export class AppComponent {
   //ngOnit used to add specific initializaion logic.
 
   navigateToAuthPage() {
-    this.router.navigate(['/auth/login'])
+    this.router.navigate(['auth/login']);
   }
 }
