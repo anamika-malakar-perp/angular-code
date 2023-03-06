@@ -7,6 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: AuthComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent
+      }
+    ]
   },
 ];
 
