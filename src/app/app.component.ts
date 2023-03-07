@@ -11,19 +11,28 @@ export class AppComponent {
   progresValue;
 
   constructor(private router: Router) {
-    this.progresValue =0;
+    this.progresValue = 0;
     console.log(this.name);
   }
 
-  @HostListener("window:scroll", [])
+  @HostListener('window:scroll', [])
   onWindowScroll() {
-    var h = document.documentElement, 
-      b = document.body,
-      scrollTop = 'scrollTop',
-      scrollHeight = 'scrollHeight';
-      this.progresValue = (h[scrollTop]||b[scrollTop]) / ((h[scrollHeight]||b[scrollHeight]) - h.clientHeight) * 100;
-      console.log(this.progresValue)
+    // var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    // var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // this.progresValue = (winScroll / height) * 100;
+
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
   }
+  // The scrollHeight value is equal to the minimum height the element would require in order to fit all the content in the viewport without using a vertical scrollbar.
+
+  // clientHeight: it includes the element's padding, but not its border, margin or horizontal scrollbar (if present)
+
+  // The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically.
+
+  // documentElement property gives you the html element, document.body property gives you the body element.
 
   //Without constructor and ngOnit the component will initiate.
   //Constructor used to keep all the instance of dependency injection
