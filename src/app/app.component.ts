@@ -1,5 +1,6 @@
 import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -41,4 +42,11 @@ export class AppComponent {
   navigateToAuthPage() {
     this.router.navigate(['auth/login']);
   }
+
+  obsv = new Observable((observer) => {
+    console.log('Observale started')
+    setTimeout(() => {
+      observer.next(9000)
+    }, 1000)
+  })
 }
