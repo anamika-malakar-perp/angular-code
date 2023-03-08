@@ -2,10 +2,10 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: 'user-data',
-  templateUrl: './user-data.html',
-  styleUrls : ['./user-data.scss']
+  templateUrl: './user-data.component.html',
+  styleUrls : ['./user-data.component.scss']
 })
 
-export class userData {
+export class UserData {
 
 }

@@ -3,7 +3,10 @@ import { Component, ViewEncapsulation } from "@angular/core";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  // encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.Emulated
 })
 
 export class LoginComponent {
@@ -12,7 +15,7 @@ export class LoginComponent {
   //The view encapsulation in Angualar is strategy that how angualr hides the styles defined in the component from bleeding over to the parts of the application.
 
   // Three strategies
-  // ViewEncapsulation.None
-  // ViewEncapsulation.Emulated
+  // ViewEncapsulation.None - there is no shadow dom, style is not scoped to the component
+  // ViewEncapsulation.Emulated - angular will create shadow dom for the compoenent and style is scoped to the environment.
   // ViewEncapsulation.ShadowDOM
 }
