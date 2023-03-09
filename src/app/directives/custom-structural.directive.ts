@@ -1,10 +1,10 @@
-import { Directive, Input, TemplateRef, ViewContainerRef } from "@angular/core";
+import { Directive, Input, OnChanges, TemplateRef, ViewContainerRef } from "@angular/core";
 
 @Directive({
   selector: '[myngIf]'
 })
 
-export class CustomIf {
+export class CustomIf implements OnChanges {
   @Input() myngIf: boolean;
   constructor(private view: ViewContainerRef, private template: TemplateRef<any>) {
 
