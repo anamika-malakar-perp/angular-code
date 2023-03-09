@@ -39,6 +39,8 @@ export class AppComponent {
   //Constructor used to keep all the instance of dependency injection
   //ngOnit used to add specific initializaion logic.
 
+  //@Inject is to - on our own we need to say to angualr @Inject decorator for the service file
+
   navigateToAuthPage() {
     this.router.navigate(['auth/login']);
   }
