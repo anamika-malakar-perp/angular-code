@@ -21,4 +21,15 @@ export class UserData {
   //It uses ngModel directive
 
   value = ""
+
+  //Safe navigation operator 
+  //it guard against null and undefined values
+
+  //Typescript enforces the strict null checking if you enable the --strictNullChecks flag in your tsconfig.json. 
+  //directive help us to change the apperance, behaviuor or layout of dom element using the directive
+  //Structural Directive
+
+  //ngStyle - dynamic styles
+
+  //* tell the angualr that we have structural directive and we manipulating the dom and tells angular to inject the templateRef, the angular need to locate the template
 }
