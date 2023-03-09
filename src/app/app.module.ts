@@ -9,7 +9,7 @@ import { AuthGuard } from './authGuard/auth-guard.service';
 import { CustomIf } from './directives/custom-structural.directive';
 
 @NgModule({
-  declarations: [AppComponent, AppHighlight, ConvertNumber, CustomIf],
+  declarations: [AppComponent, AppHighlight, ConvertNumber],
   imports: [BrowserModule, AppRoutingModule, MatProgressBarModule],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
