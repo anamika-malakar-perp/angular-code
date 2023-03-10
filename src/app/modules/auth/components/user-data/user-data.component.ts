@@ -15,6 +15,7 @@ export class UserData {
 
   title = 'Angular data';
   show = true;
+  num = 0
 
   //From view to component :- Event binding such as keystokes, click, hover
 

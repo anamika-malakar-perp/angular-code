@@ -30,15 +30,20 @@ export class ToolTip {
   }
 
   showTool() {
-    setTimeout(() => {
-
-      this.hoverTooltip = this.render.createElement('span');
-      const text = this.render.createText(this.toolTip)
-      this.render.appendChild(this.hoverTooltip, text);
+    this.hoverTooltip = this.render.createElement('span');
+    const text = this.render.createText(this.toolTip)
+    this.render.appendChild(this.hoverTooltip, text);
+  
+    this.render.appendChild(document.body, this.hoverTooltip);
+    this.render.addClass(this.hoverTooltip, 'tooltip')
     
-      this.render.appendChild(document.body, this.hoverTooltip);
-      this.render.addClass(this.hoverTooltip, 'tooltip')
-    }, 1000)
+    // let hostPos = this.element.nativeElement.getBoundingClientRect();
+
+    // let top = hostPos.bottom+10 ; 
+    // let left = hostPos.left;
+ 
+    // this.render.setStyle(this.hoverTooltip, 'top', `${top}px`);
+    // this.render.setStyle(this.hoverTooltip, 'left', `${left}px`);
   }
 
   hideTool() {

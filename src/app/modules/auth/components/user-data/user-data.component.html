@@ -18,3 +18,14 @@
 
 <div toolTip='Tool tip directive ma'>Tool tip directive example</div>
 
+Enter any number : <input type="number" name="value" [(ngModel)]="value">
+
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="0">0</div>
+  <div *ngSwitchCase="1">1</div>
+  <div *ngSwitchDefault>This is default</div>
+</div>
+
+<div [ngClass]="{'red': true}">CSS using ngclass</div>
+
+
