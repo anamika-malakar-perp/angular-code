@@ -9,6 +9,7 @@ export class ToolTip {
   toolTip: string;
 
   hoverTooltip
+  eltooltip
 
   // The role of ElementRef is to provide us with direct access to the DOM element, which will be available through a property called nativeElement.
 
@@ -20,10 +21,33 @@ export class ToolTip {
   @HostListener('mouseenter')
   onMouseEnter() {
     console.log(!this.hoverTooltip)
+    if(!this.hoverTooltip) this.showTool() 
   }
 
   @HostListener('mouseleave')
   onMouseLeave() {
-    
+    if(this.hoverTooltip) this.hideTool() 
   }
+
+  showTool() {
+    setTimeout(() => {
+
+      this.hoverTooltip = this.render.createElement('span');
+      const text = this.render.createText(this.toolTip)
+      this.render.appendChild(this.hoverTooltip, text);
+    
+      this.render.appendChild(document.body, this.hoverTooltip);
+      this.render.addClass(this.hoverTooltip, 'tooltip')
+    }, 1000)
+  }
+
+  hideTool() {
+    setTimeout(() => {
+
+      this.render.removeClass(this.hoverTooltip, 'tooltip')
+      this.render.removeChild(document.body, this.hoverTooltip);
+      this.hoverTooltip = null;
+    }, 1000)
+  }
+  
 }
