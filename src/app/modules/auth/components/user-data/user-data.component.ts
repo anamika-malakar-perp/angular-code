@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Observable, of } from "rxjs";
 
 @Component({
   selector: 'user-data',
@@ -43,4 +44,12 @@ export class UserData {
   showIt() {
     this.show = !this.show;
   }
+
+  obsvaluedata = new Observable((observer) => {
+    observer.next(10),
+    observer.next(20),
+    observer.next(30)
+  }).subscribe(res => console.log(res))
+
+  obsvalue = of([10, 20, 30])
 }
