@@ -19,6 +19,7 @@ export class UserData {
   num: number= 9542.14554;
   exampleData = "Hello I am in Angular"
   msg: string = 'Angular pipes Example' ;
+  cur = 175
 
   //From view to component :- Event binding such as keystokes, click, hover
 
