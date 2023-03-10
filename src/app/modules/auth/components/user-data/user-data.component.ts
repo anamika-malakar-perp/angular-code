@@ -13,7 +13,8 @@ export class UserData {
   //From component to view : interpolation and property binding - allows us to bind HTML element property to a property in the component.example: href, src, textContent etc.
   //and set the properties of custom compoenents and dirctives
 
-  title = 'Angular data'
+  title = 'Angular data';
+  show = true;
 
   //From view to component :- Event binding such as keystokes, click, hover
 

@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ConvertNumber } from './pipes/number.pipe';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AuthGuard } from './authGuard/auth-guard.service';
-import { CustomIf } from './directives/custom-structural.directive';
 
 @NgModule({
   declarations: [AppComponent, AppHighlight, ConvertNumber],
