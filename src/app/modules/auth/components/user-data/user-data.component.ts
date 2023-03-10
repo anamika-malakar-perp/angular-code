@@ -15,7 +15,10 @@ export class UserData {
 
   title = 'Angular data';
   show = true;
-  num = 0
+  date = new Date();
+  num: number= 9542.14554;
+  exampleData = "Hello I am in Angular"
+  msg: string = 'Angular pipes Example' ;
 
   //From view to component :- Event binding such as keystokes, click, hover
 

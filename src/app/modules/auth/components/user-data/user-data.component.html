@@ -28,4 +28,25 @@ Enter any number : <input type="number" name="value" [(ngModel)]="value">
 
 <div [ngClass]="{'red': true}">CSS using ngclass</div>
 
+<div [ngStyle]="{'color': 'purple', 'font-size': '20px'}">CSS using ngStyle</div>
+
+<!-- Date pipe -->
+<div>{{date | date: 'medium'}}</div>
+
+<!-- lowercase and uppercase pipe -->
+<div>{{exampleData | uppercase}}</div>
+<div>{{exampleData | lowercase}}</div>
+
+<!-- slice -->
+<div>{{msg | slice: 11: 20}}</div>
+
+<!-- Decimal or number pipe -->
+<!-- The number pipe is used format a number as string. the pipe will format the number according to locale rules. -->
+<!-- digitInfo is a string which has the following format -->
+<!-- {minIntegerDigits}.{minFractionDigits}-{maxFractionDigits} -->
+minIntegerDigits - is the minimum number of integer digits to use. Defalut is 1
+minFractionDigita - is the minimum number of digits after fraction.defaults to 0
+maxFractionDigit - is the maimum number of digits after fraction dfaults to 3
+
+
 
