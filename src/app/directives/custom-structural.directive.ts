@@ -4,7 +4,7 @@ import { Directive, Input, OnChanges, TemplateRef, ViewContainerRef } from "@ang
   selector: '[myngIf]'
 })
 
-export class CustomNgIf {
+export class CustomNgIf implements OnChanges {
   @Input() myngIf: boolean;
   constructor(private view: ViewContainerRef, private template: TemplateRef<any>) {
 

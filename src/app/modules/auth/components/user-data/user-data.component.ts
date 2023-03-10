@@ -32,5 +32,9 @@ export class UserData {
 
   //ngStyle - dynamic styles
 
-  //* tell the angualr that we have structural directive and we manipulating the dom and tells angular to inject the templateRef, the angular need to locate the template
+  //* tell the angualr that we have structural directive and we manipulating the dom and tells angular to inject the templateRef, the angular need to locate the template.
+
+  showIt() {
+    this.show = !this.show;
+  }
 }
