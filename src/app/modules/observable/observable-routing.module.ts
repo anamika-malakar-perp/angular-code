@@ -4,7 +4,7 @@ import { ObservableData } from './components/observable-data/observable-data.com
 
 const routes: Routes = [
   {
-    path: 'observable',
+    path: 'observable-data',
     component: ObservableData,
   },
 ];

@@ -9,6 +9,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/auth/auth.module').then(m => m.AuthModule),
   },
+  {
+    path: 'observable',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/observable/observable.module').then(m => m.ObservableModule),
+  },
 ];
 
 @NgModule({

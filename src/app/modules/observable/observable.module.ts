@@ -8,4 +8,4 @@ import { ObservableRoutingModule } from "./observable-routing.module";
   providers: [],
 })
 
-export class Observable {}
+export class ObservableModule {}
