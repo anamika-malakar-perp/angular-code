@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { combineLatest, map, merge, of } from 'rxjs';
-import { concatWith } from 'rxjs/operators';
+import { startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-observable-data',
@@ -21,10 +21,17 @@ export class ObservableData {
   
     this.fees.subscribe((res) => console.log('data',res))
 
-    this.final_value = this.list1.pipe(concatWith(this.list2))
+    // this.final_value = this.list1.pipe(concatWith(this.list2))
+    // this.final_value.subscribe(x => console.log(x));
+
+    this.final_value = merge(this.list1, this.list2);  
     this.final_value.subscribe(x => console.log(x));
 
-    this.final_value = this.list1.pipe(merge(this.list2))
+    of(1,2,3)
+    .pipe(
+      startWith('a')
+    )
+    .subscribe(val => console.log(val));
   }
   // A stream is data, which arrives over a period of time.
   // value is not only that stream emits
@@ -42,4 +49,8 @@ export class ObservableData {
   // In RxJS CombineLatest combines multiple observables to create an observable, those values are calculated from the latest values of each of its input observables, once any of them emit irrespective of their index.
 
   //In Rxjs ConcatWith - This operator will sequentially emit the Observable given as input and proceed to the next one.(order is maintened)
+
+  //merge - This operator will sequentially emit the Observable given as input and proceed to the next one.(order is not maintened)
+
+  // Prepend a stream with a value. This value will be synchronously emitted upon subscription:
 }
